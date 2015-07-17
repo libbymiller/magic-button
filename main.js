@@ -64,11 +64,21 @@ app.use('/radio',
   )
 );
 
+//libby
+
+app.use('/services',
+  require('./app/services/routes')(
+    express.Router()
+  )
+);
+
+
 app.use('/',
   require('./app/ui/routes')(
     express.Router()
   )
 );
+
 
 http.createServer(app).listen(port);
 logger.info('Started server on port', port);

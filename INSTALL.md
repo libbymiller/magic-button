@@ -102,3 +102,16 @@ You must commit the compiled CSS and images in `public` when you commit your cod
 
 The compiled JS isn't comitted, it's generated on `npm install`.
 
+
+## Offline version
+
+    cd /opt/radiodan/apps/magic/current/app/services/scripts
+    ruby getplaylists.rb
+
+    sudo supervisorctl restart all
+
+in /opt/radiodan/adhoc/try_adhoc_network
+
+    /bin/ln -sf /etc/nginx/sites-available/radiodan_client /etc/nginx/sites-enabled/radiodan_client
+    #/bin/ln -sf /etc/nginx/sites-available/wpa_cli_web_redirect /etc/nginx/sites-enabled/wpa_cli_web_redirect
+
